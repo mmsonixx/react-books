@@ -1,5 +1,7 @@
 import { BookList } from "./components/BookList/BookList";
 import { Button } from "./components/Button/Button";
+import { Container } from "./components/Container/Container";
+
 import "./App.css";
 
 function App() {
@@ -11,10 +13,26 @@ function App() {
 
   return (
     <>
-      <BookList books={books} />
-      <Button title="Реєстрація"/>
+      <header>
+        <h2>Welcome</h2>
+      </header>
+      <main>
+        <section>
+          <Container>
+            <h1>Hero</h1>
+          </Container>
+        </section>
+        <section>
+          <Container>
+            <BookList books={books} />
+            <Button title="Реєстрація" />
+          </Container>
+        </section>
+      </main>
+      <footer>
+        <h2>Footer</h2>
+      </footer>
     </>
-
   );
 }
 
